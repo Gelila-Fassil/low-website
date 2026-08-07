@@ -41,3 +41,30 @@ Import trace:
     at ignore-listed frames
 --- BUILD_EXIT:0 ---
 --- GIT ADD/COMMIT ---
+[main bb2d067] chore: update hero spacing and practice area copy; UI tweaks
+ 38 files changed, 3946 insertions(+), 982 deletions(-)
+ create mode 100644 build_and_push.txt
+ create mode 100644 build_check.txt
+ create mode 100644 build_check2.txt
+ create mode 100644 build_exitcode.txt
+ create mode 100644 hello_terminal_test.txt
+ create mode 100644 public/background.jpeg
+ create mode 100644 public/ceo.jpg
+ create mode 100644 public/giammarco-boscaro-zeH-ljawHtg-unsplash.jpg
+ create mode 100644 public/person1.jpg
+ create mode 100644 public/person2.jpg
+ create mode 100644 public/person3.jpg
+ create mode 100644 public/sasun-bughdaryan-ozS0tPf8QT0-unsplash.jpg
+ create mode 100644 public/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg
+ create mode 100644 public/tingey-injury-law-firm-veNb0DDegzE-unsplash.jpg
+ create mode 100644 src/app/about/page.tsx
+ create mode 100644 src/components/sections/HistoryTimeline.tsx
+ create mode 100644 src/components/sections/Testimonials.tsx
+ create mode 100644 src/components/ui/3d-card.tsx
+ create mode 100644 src/components/ui/floating-dock.tsx
+ create mode 100644 src/components/ui/infinite-moving-cards.tsx
+ create mode 100644 src/lib/utils.ts
+ create mode 100644 src/types/tabler-icons.d.ts
+ create mode 100644 term_test.txt
+ create mode 100644 term_test2.txt
+--- GIT PUSH ---
