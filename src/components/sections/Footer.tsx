@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="relative z-10 border-t border-slate-800 bg-black/40 backdrop-blur-lg overflow-hidden">
@@ -22,32 +24,31 @@ export default function Footer() {
                 ></i>
               </div>
               <span className="font-semibold tracking-wider text-lg text-white">
-                HAILU LAWYERS
+                MICHAEL HAILU APLC
               </span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Navigating the complexities of modern law with foresight,
-              precision, and aggressive strategy. Future-proofing your business
-              and your legacy.
+              Compassionate, strategic, and results-driven legal representation
+              for individuals, families, employees, tenants, and injury victims.
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.linkedin.com"
                 className="social-icon w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-300"
               >
                 <i className="fab fa-linkedin-in text-sm"></i>
               </a>
               <a
-                href="#"
-                className="social-icon w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-300"
-              >
-                <i className="fab fa-twitter text-sm"></i>
-              </a>
-              <a
-                href="#"
+                href="https://www.facebook.com"
                 className="social-icon w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-300"
               >
                 <i className="fab fa-facebook-f text-sm"></i>
+              </a>
+              <a
+                href="https://www.instagram.com"
+                className="social-icon w-10 h-10 rounded-full glass-card flex items-center justify-center text-slate-300"
+              >
+                <i className="fab fa-instagram text-sm"></i>
               </a>
             </div>
           </div>
@@ -58,20 +59,20 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a
-                  href="#about"
+                <Link
+                  href="/about"
                   className="footer-link text-slate-400 flex items-center gap-2"
                 >
                   <i
                     className="fas fa-chevron-right text-[8px]"
                     style={{ color: "var(--brand-light)" }}
                   ></i>{" "}
-                  Why Hailu
-                </a>
+                  About Us
+                </Link>
               </li>
               <li>
-                <a
-                  href="#practice"
+                <Link
+                  href="/#practice"
                   className="footer-link text-slate-400 flex items-center gap-2"
                 >
                   <i
@@ -79,47 +80,23 @@ export default function Footer() {
                     style={{ color: "var(--brand-light)" }}
                   ></i>{" "}
                   Practice Areas
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#method"
+                <Link
+                  href="/#cases"
                   className="footer-link text-slate-400 flex items-center gap-2"
                 >
                   <i
                     className="fas fa-chevron-right text-[8px]"
                     style={{ color: "var(--brand-light)" }}
                   ></i>{" "}
-                  Our Method
-                </a>
+                  Testimonials
+                </Link>
               </li>
               <li>
-                <a
-                  href="#cases"
-                  className="footer-link text-slate-400 flex items-center gap-2"
-                >
-                  <i
-                    className="fas fa-chevron-right text-[8px]"
-                    style={{ color: "var(--brand-light)" }}
-                  ></i>{" "}
-                  Case Studies
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#team"
-                  className="footer-link text-slate-400 flex items-center gap-2"
-                >
-                  <i
-                    className="fas fa-chevron-right text-[8px]"
-                    style={{ color: "var(--brand-light)" }}
-                  ></i>{" "}
-                  Our Partners
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
+                <Link
+                  href="/#contact"
                   className="footer-link text-slate-400 flex items-center gap-2"
                 >
                   <i
@@ -127,52 +104,26 @@ export default function Footer() {
                     style={{ color: "var(--brand-light)" }}
                   ></i>{" "}
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-semibold tracking-widest text-sm uppercase mb-6">
-              Expertise
+              Practice Areas
             </h4>
             <ul className="space-y-3 text-sm">
-              <li>
-                <a href="#" className="footer-link text-slate-400">
-                  Corporate Law & M&A
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer-link text-slate-400">
-                  Criminal Defense
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer-link text-slate-400">
-                  Intellectual Property
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer-link text-slate-400">
-                  International Arbitration
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer-link text-slate-400">
-                  Venture Capital
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer-link text-slate-400">
-                  Compliance & Governance
-                </a>
-              </li>
+              <li className="text-slate-400">Personal Injury</li>
+              <li className="text-slate-400">Employment Law</li>
+              <li className="text-slate-400">Immigration Law</li>
+              <li className="text-slate-400">Tenant Rights</li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-semibold tracking-widest text-sm uppercase mb-6">
-              Global Offices
+              Office & Contact
             </h4>
             <div className="space-y-5 text-sm">
               <div className="flex gap-3">
@@ -181,21 +132,12 @@ export default function Footer() {
                   style={{ color: "var(--brand-light)" }}
                 ></i>
                 <div>
-                  <h5 className="text-white font-medium mb-1">New York (HQ)</h5>
+                  <h5 className="text-white font-medium mb-1">
+                    Serving Clients Statewide
+                  </h5>
                   <p className="text-slate-400 text-xs leading-relaxed">
-                    1271 Avenue of the Americas, NY 10020
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <i
-                  className="fas fa-map-marker-alt mt-1"
-                  style={{ color: "var(--brand-light)" }}
-                ></i>
-                <div>
-                  <h5 className="text-white font-medium mb-1">London</h5>
-                  <p className="text-slate-400 text-xs leading-relaxed">
-                    1 Canada Square, Canary Wharf, E14 5AB
+                    California-based representation with virtual and in-person
+                    consultations available.
                   </p>
                 </div>
               </div>
@@ -206,13 +148,13 @@ export default function Footer() {
                 ></i>
                 <div>
                   <h5 className="text-white font-medium mb-1">
-                    24/7 Rapid Response
+                    Call for assistance
                   </h5>
                   <a
-                    href="tel:+12125550199"
+                    href="tel:+13105550199"
                     className="text-slate-400 text-xs hover:text-white transition"
                   >
-                    +1 (212) 555-0199
+                    +1 (310) 555-0199
                   </a>
                 </div>
               </div>
@@ -220,38 +162,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="glass-card rounded-2xl p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
-          <div
-            className="absolute -right-10 -top-10 w-40 h-40 rounded-full blur-3xl opacity-30"
-            style={{ background: "var(--brand-main)" }}
-          ></div>
-          <div className="relative z-10">
-            <h4 className="text-xl font-bold text-white mb-2">
-              Stay ahead of legal trends.
-            </h4>
-            <p className="text-slate-400 text-sm">
-              Subscribe to our quarterly brief on corporate law, tech IP, and
-              global compliance.
-            </p>
-          </div>
-          <form className="relative z-10 flex w-full md:w-auto gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="futuristic-input px-5 py-3 rounded-xl text-white placeholder-slate-500 text-sm w-full md:w-64"
-            />
-            <button
-              type="button"
-              className="cta-gradient px-6 py-3 rounded-xl text-xs font-semibold tracking-widest uppercase whitespace-nowrap"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-slate-500 text-xs tracking-wide">
-            © 2024 Hailu Lawyers. All Rights Reserved.
+            © 2026 Law Office of Michael Hailu APLC. All rights reserved.
           </div>
           <div className="flex gap-6 text-slate-500 text-xs tracking-wide">
             <a href="#" className="hover:text-slate-300 transition">
@@ -261,9 +174,6 @@ export default function Footer() {
               Terms of Service
             </a>
             <a href="#" className="hover:text-slate-300 transition">
-              Client Portal
-            </a>
-            <a href="#" className="hover:text-slate-300 transition">
               Disclaimer
             </a>
           </div>
@@ -271,11 +181,12 @@ export default function Footer() {
 
         <div className="mt-8 text-center">
           <p className="text-slate-700 text-[10px] leading-relaxed max-w-4xl mx-auto italic">
-            Attorney Advertising. Prior results do not guarantee a similar outcome.
-            The information on this website is for general information purposes only.
-            Nothing on this site should be taken as legal advice for any individual case or situation.
-            This information is not intended to create, and receipt or viewing does not constitute,
-            an attorney-client relationship.
+            Attorney Advertising. Prior results do not guarantee a similar
+            outcome. The information on this website is for general information
+            purposes only. Nothing on this site should be taken as legal advice
+            for any individual case or situation. This information is not
+            intended to create, and receipt or viewing does not constitute, an
+            attorney-client relationship.
           </p>
         </div>
       </div>

@@ -17,8 +17,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Hailu Lawyers - The Future of Legal Defense",
-  description: "Global Corporate & Litigation Experts",
+  title: "Law Office of Michael Hailu APLC | Personal Injury, Employment, Immigration & Tenant Rights",
+  description: "Compassionate, strategic, and results-driven legal representation. Dedicated to protecting the rights of individuals, families, employees, tenants, and injury victims.",
 };
 
 export default function RootLayout({

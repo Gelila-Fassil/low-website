@@ -19,15 +19,15 @@ export default function Method() {
               </span>
             </h2>
             <p className="text-slate-400 leading-relaxed mb-10">
-              Our proprietary 4-step process ensures that no detail is overlooked.
-              We combine data-driven insights with decades of courtroom experience
-              to build an impenetrable case strategy tailored to your unique
-              situation.
+              Our proprietary 4-step process ensures that no detail is
+              overlooked. We combine data-driven insights with decades of
+              courtroom experience to build an impenetrable case strategy
+              tailored to your unique situation.
             </p>
             <div className="image-glass-frame rounded-2xl p-2 inline-block">
               <img
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Legal Strategy"
+                src="/sasun-bughdaryan-ozS0tPf8QT0-unsplash.jpg"
+                alt="Legal strategy and consultation"
                 className="rounded-xl w-full h-64 object-cover"
               />
             </div>
@@ -42,9 +42,9 @@ export default function Method() {
                 01. Deep Dive Discovery
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                We utilize AI-assisted document review to uncover every fact. Our
-                team conducts a forensic analysis of your case, leaving no stone
-                unturned to ensure a bulletproof foundation.
+                We utilize AI-assisted document review to uncover every fact.
+                Our team conducts a forensic analysis of your case, leaving no
+                stone unturned to ensure a bulletproof foundation.
               </p>
             </div>
           </Reveal>
@@ -69,8 +69,8 @@ export default function Method() {
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Whether in the boardroom or the courtroom, we execute with
-                precision and relentless advocacy. We command the room and control
-                the narrative.
+                precision and relentless advocacy. We command the room and
+                control the narrative.
               </p>
             </div>
           </Reveal>

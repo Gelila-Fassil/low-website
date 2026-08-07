@@ -1,0 +1,73 @@
+PWD:
+/mnt/g/low-website
+--- GIT STATUS ---
+ M package-lock.json
+ M package.json
+ M src/app/globals.css
+ M src/app/layout.tsx
+ M src/app/page.tsx
+ M src/components/Navbar.tsx
+ M src/components/sections/About.tsx
+ M src/components/sections/CaseStudies.tsx
+ M src/components/sections/Contact.tsx
+ M src/components/sections/Footer.tsx
+ M src/components/sections/Hero.tsx
+ M src/components/sections/Method.tsx
+ M src/components/sections/PracticeAreas.tsx
+ M src/components/sections/Team.tsx
+?? hello_terminal_test.txt
+?? public/background.jpeg
+?? public/ceo.jpg
+?? public/giammarco-boscaro-zeH-ljawHtg-unsplash.jpg
+?? public/person1.jpg
+?? public/person2.jpg
+?? public/person3.jpg
+?? public/sasun-bughdaryan-ozS0tPf8QT0-unsplash.jpg
+?? public/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg
+?? public/tingey-injury-law-firm-veNb0DDegzE-unsplash.jpg
+?? src/app/about/
+?? src/components/sections/HistoryTimeline.tsx
+?? src/components/sections/Testimonials.tsx
+?? src/components/ui/
+?? src/lib/
+?? src/types/
+?? term_test.txt
+--- BUILD ---
+
+> low-website@0.1.0 build
+> next build
+
+▲ Next.js 16.2.12 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./src/app/globals.css
+Error evaluating Node.js code
+Error: Cannot find module '../lightningcss.linux-x64-gnu.node'
+Require stack:
+- /mnt/g/low-website/node_modules/lightningcss/node/index.js
+- /mnt/g/low-website/node_modules/@tailwindcss/node/dist/index.js
+- /mnt/g/low-website/node_modules/@tailwindcss/postcss/dist/index.js
+- /mnt/g/low-website/.next/build/chunks/[root-of-the-server]__0oj80bi._.js
+- /mnt/g/low-website/.next/build/chunks/[turbopack]_runtime.js
+- /mnt/g/low-website/.next/build/56416d4ae4ce586f.js
+    [at Module._resolveFilename (node:internal/modules/cjs/loader:1207:15)]
+    [at Module._load (node:internal/modules/cjs/loader:1038:27)]
+    [at Module.require (node:internal/modules/cjs/loader:1289:19)]
+    [at require (node:internal/modules/helpers:182:18)]
+    [at Object.<anonymous> (/mnt/g/low-website/node_modules/lightningcss/node/index.js:20:12)]
+    [at Module._compile (node:internal/modules/cjs/loader:1521:14)]
+    [at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)]
+    [at Module.load (node:internal/modules/cjs/loader:1266:32)]
+    [at Module._load (node:internal/modules/cjs/loader:1091:12)]
+    [at Module.require (node:internal/modules/cjs/loader:1289:19)]
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+    at ignore-listed frames
