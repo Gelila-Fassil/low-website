@@ -95,7 +95,7 @@ const FloatingDockDesktop = ({
   items: { title: string; href: string; icon?: React.ReactNode }[];
   className?: string;
 }) => {
-  let mouseX = useMotionValue(Infinity);
+  const mouseX = useMotionValue(Infinity);
   return (
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
@@ -123,23 +123,23 @@ function TextContainer({
   href: string;
   icon?: React.ReactNode;
 }) {
-  let ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
-  let distance = useTransform(mouseX, (val) => {
-    let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
+  const distance = useTransform(mouseX, (val) => {
+    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds.width / 2;
   });
 
-  let scaleTransform = useTransform(distance, [-120, 0, 120], [1, 1.18, 1]);
-  let yTransform = useTransform(distance, [-120, 0, 120], [0, -3, 0]);
+  const scaleTransform = useTransform(distance, [-120, 0, 120], [1, 1.18, 1]);
+  const yTransform = useTransform(distance, [-120, 0, 120], [0, -3, 0]);
 
-  let scale = useSpring(scaleTransform, {
+  const scale = useSpring(scaleTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
   });
 
-  let y = useSpring(yTransform, {
+  const y = useSpring(yTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,

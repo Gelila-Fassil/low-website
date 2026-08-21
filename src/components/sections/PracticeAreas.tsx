@@ -1,288 +1,193 @@
 "use client";
 
 import Link from "next/link";
-import { Reveal } from "../ClientHelpers";
-import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 
 export default function PracticeAreas() {
+  const practices = [
+    {
+      id: "employment-law",
+      title: "Employment Law",
+      icon: "fa-briefcase",
+      featureHeadline: "YOUR WORKPLACE RIGHTS MATTER.",
+      supportingText:
+        "You deserve fair treatment and fair pay. We’re here to help protect your rights in the workplace.",
+      ctaText: "FREE EMPLOYMENT LAW CONSULTATION",
+      ctaHref: "/practice-areas/employment-law",
+      subItems: [
+        {
+          name: "Unpaid Wages & Overtime",
+          desc: "Helping employees pursue wages, overtime pay, and compensation they may be owed.",
+        },
+        {
+          name: "Wrongful Termination",
+          desc: "Protecting employees who believe they were unlawfully terminated from their jobs.",
+        },
+        {
+          name: "Workplace Discrimination & Harassment",
+          desc: "Representing employees facing discrimination, harassment, or unfair treatment at work.",
+        },
+        {
+          name: "Workplace Retaliation",
+          desc: "Helping employees protect their rights when they face retaliation for reporting misconduct or exercising workplace rights.",
+        },
+      ],
+    },
+    {
+      id: "tenant-habitability",
+      title: "Tenant Habitability",
+      icon: "fa-house-circle-exclamation",
+      featureHeadline: "YOU DON'T HAVE TO LIVE IN UNSAFE OR UNHEALTHY CONDITIONS.",
+      supportingText:
+        "You deserve a safe and livable home. We’re here to help protect your rights.",
+      ctaText: "FREE TENANT CONSULTATION",
+      ctaHref: "/practice-areas/tenant-habitability",
+      subItems: [
+        {
+          name: "Mold & Mildew",
+          desc: "Helping tenants address unhealthy living conditions caused by persistent mold and moisture.",
+        },
+        {
+          name: "Pest Infestation",
+          desc: "Protecting tenants dealing with roaches, rodents, and other unresolved pest problems.",
+        },
+        {
+          name: "Water Leaks & Plumbing",
+          desc: "Assisting tenants facing ongoing leaks, water damage, and serious plumbing issues.",
+        },
+        {
+          name: "Electrical Problems",
+          desc: "Helping tenants address unsafe electrical conditions that may put their home and safety at risk.",
+        },
+      ],
+    },
+    {
+      id: "personal-injury",
+      title: "Personal Injury",
+      icon: "fa-user-injured",
+      featureHeadline: "INJURED BECAUSE OF SOMEONE ELSE’S NEGLIGENCE?",
+      supportingText:
+        "An unexpected injury can change your life. We’re here to help you understand your rights and legal options.",
+      ctaText: "FREE PERSONAL INJURY CONSULTATION",
+      ctaHref: "/practice-areas/personal-injury",
+      subItems: [
+        {
+          name: "Car Accidents",
+          desc: "Helping individuals injured in car accidents understand their legal options and pursue compensation.",
+        },
+        {
+          name: "Slip & Fall",
+          desc: "Representing individuals injured because of unsafe or hazardous property conditions.",
+        },
+        {
+          name: "Negligence-Related Injuries",
+          desc: "Helping individuals pursue claims when another party’s negligence causes an injury.",
+        },
+      ],
+    },
+    {
+      id: "immigration-law",
+      title: "Immigration Law",
+      icon: "fa-passport",
+      featureHeadline: "YOUR IMMIGRATION JOURNEY DESERVES TRUSTED LEGAL GUIDANCE.",
+      supportingText:
+        "Whether you’re pursuing permanent residency, citizenship, or bringing family together, we’re here to guide you through the legal process.",
+      ctaText: "IMMIGRATION CONSULTATION",
+      ctaHref: "/practice-areas/immigration-law",
+      subItems: [
+        {
+          name: "Green Cards",
+          desc: "Helping individuals and families navigate the process of obtaining lawful permanent residency.",
+        },
+        {
+          name: "Citizenship",
+          desc: "Providing legal guidance throughout the U.S. naturalization and citizenship process.",
+        },
+        {
+          name: "Family Petitions",
+          desc: "Helping families navigate immigration petitions for eligible relatives.",
+        },
+      ],
+    },
+  ];
+
   return (
-    <section id="practice" className="relative py-28 md:py-36 z-10 overflow-hidden">
-      {/* Ambient Background Orbs */}
-      <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[var(--brand-main)]/15 rounded-full blur-[160px] pointer-events-none z-0"></div>
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-purple-900/15 rounded-full blur-[140px] pointer-events-none z-0"></div>
-
-      <div className="wrapper relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <Reveal>
-            <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-4 glass-card border-white/20"
-              style={{ color: "var(--brand-light)" }}
-            >
-              <i className="fas fa-scale-balanced text-xs"></i>
-              <span>Core Practice Areas</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-white leading-tight mb-4">
-              The{" "}
-              <span className="italic font-normal" style={{ color: "var(--brand-light)" }}>
-                Bento
-              </span>{" "}
-              of Law
-            </h2>
-            <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed max-w-2xl mx-auto">
-              Explore our most trusted practice areas, each designed to protect your rights and secure the best possible outcome.
-            </p>
-          </Reveal>
+    <section id="practice" className="py-24 bg-[#F5F3EF] relative border-b border-neutral-200">
+      <div className="wrapper">
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0A1128]/5 text-[#0A1128] text-[10px] font-bold uppercase tracking-widest border border-[#D4AF37]/30 shadow-sm">
+            <i className="fas fa-scale-balanced text-[#D4AF37]"></i>
+            <span>Our Practice Areas</span>
+          </div>
+          <h2 className="text-[#0A1128] font-serif-heading leading-tight">
+            Dedicated Legal Representation <br /> Across California
+          </h2>
+          <p className="text-neutral-600 text-sm sm:text-base font-medium">
+            Providing compassionate, strategic, and client-focused advocacy tailored to your unique legal needs.
+          </p>
         </div>
 
-        {/* Aceternity UI 3D Card Grid - Expanded Container Width */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-stretch max-w-7xl mx-auto">
-          
-          {/* CARD 1: PERSONAL INJURY */}
-          <Reveal className="h-full">
-            <CardContainer className="inter-var w-full h-full" containerClassName="w-full h-full">
-              <CardBody className="bg-gradient-to-b from-[#1c1628]/90 via-[#130f1c]/90 to-[#0e0b14]/90 relative group/card border-white/20 hover:border-[var(--brand-light)]/60 hover:shadow-2xl hover:shadow-[var(--brand-main)]/20 w-full h-full rounded-[30px] p-6 sm:p-7 border backdrop-blur-xl flex flex-col justify-between">
-                <div>
-                  {/* Card Title & Icon */}
-                  <div className="flex items-center justify-between mb-3">
-                    <CardItem
-                      translateZ="50"
-                      className="text-xl sm:text-2xl font-bold text-white font-serif tracking-wide"
-                    >
-                      Personal Injury & Accidents
-                    </CardItem>
-                    <CardItem translateZ="50">
-                      <div className="w-10 h-10 rounded-xl bg-[var(--brand-main)]/30 border border-[var(--brand-light)]/40 flex items-center justify-center text-[var(--brand-light)] text-base">
-                        <i className="fas fa-car-burst"></i>
-                      </div>
-                    </CardItem>
+        {/* Grid of Practice Area Cards */}
+        <div className="space-y-16">
+          {practices.map((area, index) => (
+            <div
+              key={area.id}
+              className="bg-white p-8 lg:p-10 rounded-2xl border border-neutral-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden hover:border-[#D4AF37] transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                {/* Left Side: Category Header & CTA */}
+                <div className="lg:col-span-5 space-y-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-[#0A1128] text-[#D4AF37] flex items-center justify-center text-xl font-bold shadow-md">
+                      <i className={`fas ${area.icon}`}></i>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-[#D4AF37] font-bold uppercase tracking-widest block">
+                        Practice Area 0{index + 1}
+                      </span>
+                      <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-[#0A1128] mt-0.5">
+                        {area.title}
+                      </h3>
+                    </div>
                   </div>
 
-                  {/* Card Subtitle */}
-                  <CardItem
-                    as="p"
-                    translateZ="60"
-                    className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-4 max-w-sm"
-                  >
-                    Aggressive legal action against insurance companies for auto collisions, catastrophic injuries, slip & fall claims, and wrongful death.
-                  </CardItem>
+                  <h4 className="text-base sm:text-lg font-serif-heading text-[#0A1128] font-bold leading-snug">
+                    {area.featureHeadline}
+                  </h4>
 
-                  {/* 3D Popping Image */}
-                  <CardItem translateZ="100" className="w-full my-3">
-                    <div className="relative w-full h-52 sm:h-56 rounded-2xl overflow-hidden shadow-xl border border-white/10 group-hover/card:shadow-2xl">
-                      <img
-                        src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80"
-                        alt="Personal Injury Advocacy"
-                        className="h-full w-full object-cover rounded-2xl group-hover/card:scale-105 transition-transform duration-700 brightness-105 contrast-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
-                    </div>
-                  </CardItem>
-                </div>
+                  <p className="text-neutral-600 text-sm font-medium leading-relaxed">
+                    {area.supportingText}
+                  </p>
 
-                {/* Bottom Action Bar */}
-                <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-2">
-                  <CardItem
-                    translateZ="80"
-                    className="px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-[11px] font-semibold uppercase tracking-wider"
-                  >
-                    No Win No Fee Guarantee
-                  </CardItem>
-                  <CardItem
-                    translateZ="100"
-                    as={Link}
-                    href="/#contact"
-                    className="cta-gradient px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-white inline-flex items-center gap-2 shadow-lg"
-                  >
-                    <span>Free Case Review</span>
-                    <i className="fas fa-arrow-right text-[10px]"></i>
-                  </CardItem>
-                </div>
-              </CardBody>
-            </CardContainer>
-          </Reveal>
-
-          {/* CARD 2: EMPLOYMENT LAW */}
-          <Reveal className="h-full">
-            <CardContainer className="inter-var w-full h-full" containerClassName="w-full h-full">
-              <CardBody className="bg-gradient-to-b from-[#1c1628]/90 via-[#130f1c]/90 to-[#0e0b14]/90 relative group/card border-white/20 hover:border-[var(--brand-light)]/60 hover:shadow-2xl hover:shadow-[var(--brand-main)]/20 w-full h-full rounded-[30px] p-6 sm:p-7 border backdrop-blur-xl flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <CardItem
-                      translateZ="50"
-                      className="text-xl sm:text-2xl font-bold text-white font-serif tracking-wide"
+                  <div className="pt-2">
+                    <Link
+                      href={area.ctaHref}
+                      className="bg-[#0A1128] hover:bg-[#1a2b5e] text-white px-6 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold inline-block text-center shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 border border-[#0A1128]"
                     >
-                      Employment & Worker Rights
-                    </CardItem>
-                    <CardItem translateZ="50">
-                      <div className="w-10 h-10 rounded-xl bg-[var(--brand-main)]/30 border border-[var(--brand-light)]/40 flex items-center justify-center text-[var(--brand-light)] text-base">
-                        <i className="fas fa-briefcase"></i>
-                      </div>
-                    </CardItem>
+                      {area.ctaText}
+                    </Link>
                   </div>
-
-                  <CardItem
-                    as="p"
-                    translateZ="60"
-                    className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-4 max-w-sm"
-                  >
-                    Defending California workers against wrongful termination, retaliation, discrimination, harassment, and unpaid wage claims.
-                  </CardItem>
-
-                  <CardItem translateZ="100" className="w-full my-3">
-                    <div className="relative w-full h-52 sm:h-56 rounded-2xl overflow-hidden shadow-xl border border-white/10 group-hover/card:shadow-2xl">
-                      <img
-                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
-                        alt="Workplace Rights"
-                        className="h-full w-full object-cover rounded-2xl group-hover/card:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
-                    </div>
-                  </CardItem>
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-2">
-                  <CardItem
-                    translateZ="80"
-                    className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15 text-[11px] text-[var(--brand-light)] font-semibold tracking-wider uppercase"
-                  >
-                    Wage & Hour Advocacy
-                  </CardItem>
-                  <CardItem
-                    translateZ="100"
-                    as={Link}
-                    href="/#contact"
-                    className="btn-outline-glass px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-white inline-flex items-center gap-2 hover:bg-white/10"
-                  >
-                    <span>Learn More</span>
-                    <i className="fas fa-chevron-right text-[10px]" style={{ color: "var(--brand-light)" }}></i>
-                  </CardItem>
-                </div>
-              </CardBody>
-            </CardContainer>
-          </Reveal>
-
-          {/* CARD 3: IMMIGRATION & CITIZENSHIP */}
-          <Reveal className="h-full">
-            <CardContainer className="inter-var w-full h-full" containerClassName="w-full h-full">
-              <CardBody className="bg-gradient-to-b from-[#1c1628]/90 via-[#130f1c]/90 to-[#0e0b14]/90 relative group/card border-white/20 hover:border-[var(--brand-light)]/60 hover:shadow-2xl hover:shadow-[var(--brand-main)]/20 w-full h-full rounded-[30px] p-6 sm:p-7 border backdrop-blur-xl flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <CardItem
-                      translateZ="50"
-                      className="text-xl sm:text-2xl font-bold text-white font-serif tracking-wide"
+                {/* Right Side: Specific Issues Handled */}
+                <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {area.subItems.map((sub, i) => (
+                    <div
+                      key={i}
+                      className="p-5 rounded-xl bg-neutral-50 border border-neutral-200 hover:border-[#D4AF37] hover:bg-white hover:scale-[1.02] transition-all duration-300 space-y-2 shadow-sm"
                     >
-                      Immigration & Naturalization
-                    </CardItem>
-                    <CardItem translateZ="50">
-                      <div className="w-10 h-10 rounded-xl bg-[var(--brand-main)]/30 border border-[var(--brand-light)]/40 flex items-center justify-center text-[var(--brand-light)] text-base">
-                        <i className="fas fa-passport"></i>
+                      <div className="flex items-center gap-2 text-[#D4AF37]">
+                        <i className="fas fa-circle-check text-xs"></i>
+                        <h5 className="text-sm font-bold text-[#0A1128]">{sub.name}</h5>
                       </div>
-                    </CardItem>
-                  </div>
-
-                  <CardItem
-                    as="p"
-                    translateZ="60"
-                    className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-4 max-w-sm"
-                  >
-                    Guiding families through green cards, employment visas, naturalization, asylum, and federal deportation defense.
-                  </CardItem>
-
-                  <CardItem translateZ="100" className="w-full my-3">
-                    <div className="relative w-full h-52 sm:h-56 rounded-2xl overflow-hidden shadow-xl border border-white/10 group-hover/card:shadow-2xl">
-                      <img
-                        src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80"
-                        alt="Immigration & Visas"
-                        className="h-full w-full object-cover rounded-2xl group-hover/card:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
+                      <p className="text-xs text-neutral-500 font-medium leading-relaxed">
+                        {sub.desc}
+                      </p>
                     </div>
-                  </CardItem>
+                  ))}
                 </div>
-
-                <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-2">
-                  <CardItem
-                    translateZ="80"
-                    className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15 text-[11px] text-[var(--brand-light)] font-semibold tracking-wider uppercase"
-                  >
-                    Deportation Defense
-                  </CardItem>
-                  <CardItem
-                    translateZ="100"
-                    as={Link}
-                    href="/#contact"
-                    className="btn-outline-glass px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-white inline-flex items-center gap-2 hover:bg-white/10"
-                  >
-                    <span>Learn More</span>
-                    <i className="fas fa-chevron-right text-[10px]" style={{ color: "var(--brand-light)" }}></i>
-                  </CardItem>
-                </div>
-              </CardBody>
-            </CardContainer>
-          </Reveal>
-
-          {/* CARD 4: TENANT RIGHTS & HOUSING JUSTICE */}
-          <Reveal className="h-full">
-            <CardContainer className="inter-var w-full h-full" containerClassName="w-full h-full">
-              <CardBody className="bg-gradient-to-b from-[#1c1628]/90 via-[#130f1c]/90 to-[#0e0b14]/90 relative group/card border-white/20 hover:border-[var(--brand-light)]/60 hover:shadow-2xl hover:shadow-[var(--brand-main)]/20 w-full h-full rounded-[30px] p-6 sm:p-7 border backdrop-blur-xl flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <CardItem
-                      translateZ="50"
-                      className="text-xl sm:text-2xl font-bold text-white font-serif tracking-wide"
-                    >
-                      Tenant Rights & Housing Justice
-                    </CardItem>
-                    <CardItem translateZ="50">
-                      <div className="w-10 h-10 rounded-xl bg-[var(--brand-main)]/30 border border-[var(--brand-light)]/40 flex items-center justify-center text-[var(--brand-light)] text-base">
-                        <i className="fas fa-house-user"></i>
-                      </div>
-                    </CardItem>
-                  </div>
-
-                  <CardItem
-                    as="p"
-                    translateZ="60"
-                    className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-4 max-w-sm"
-                  >
-                    Defending California renters against illegal evictions, toxic mold, unhabitable conditions, and corporate landlord harassment.
-                  </CardItem>
-
-                  <CardItem translateZ="100" className="w-full my-3">
-                    <div className="relative w-full h-52 sm:h-56 rounded-2xl overflow-hidden shadow-xl border border-white/10 group-hover/card:shadow-2xl">
-                      <img
-                        src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
-                        alt="Housing Justice"
-                        className="h-full w-full object-cover rounded-2xl group-hover/card:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
-                    </div>
-                  </CardItem>
-                </div>
-
-                <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-2">
-                  <CardItem
-                    translateZ="80"
-                    className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15 text-[11px] text-[var(--brand-light)] font-semibold tracking-wider uppercase"
-                  >
-                    Eviction & Mold Claims
-                  </CardItem>
-                  <CardItem
-                    translateZ="100"
-                    as={Link}
-                    href="/#contact"
-                    className="btn-outline-glass px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-white inline-flex items-center gap-2 hover:bg-white/10"
-                  >
-                    <span>Learn More</span>
-                    <i className="fas fa-chevron-right text-[10px]" style={{ color: "var(--brand-light)" }}></i>
-                  </CardItem>
-                </div>
-              </CardBody>
-            </CardContainer>
-          </Reveal>
-
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

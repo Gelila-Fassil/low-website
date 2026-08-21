@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/sections/Footer";
 import HistoryTimeline from "@/components/sections/HistoryTimeline";
 import { Reveal } from "@/components/ClientHelpers";
 
@@ -13,13 +11,9 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
       <main className="pt-28 overflow-hidden">
         {/* 1. SIMPLE & ATTRACTIVE PICTURE-ENHANCED ABOUT US HERO SECTION */}
-        <section className="relative py-16 lg:py-24 overflow-hidden border-b border-white/10">
-          {/* Ambient Lighting Orbs */}
-          <div className="absolute top-1/2 left-10 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--brand-main)]/15 rounded-full blur-[170px] pointer-events-none z-0"></div>
-          <div className="absolute top-10 right-10 w-[400px] h-[400px] bg-purple-600/15 rounded-full blur-[140px] pointer-events-none z-0"></div>
+        <section className="relative py-16 lg:py-24 overflow-hidden border-b border-neutral-200">
 
           <div className="wrapper relative z-10">
             {/* Breadcrumb Navigation */}
@@ -45,24 +39,23 @@ export default function AboutPage() {
               <div className="lg:col-span-6">
                 <Reveal>
                   <div
-                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-6 glass-card border-white/20 shadow-lg"
-                    style={{ color: "var(--brand-light)" }}
+                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest uppercase mb-6 bg-[#0A1128]/5 text-[#0A1128] border border-[#D4AF37]/30 shadow-sm"
                   >
-                    <i className="fas fa-scale-balanced text-xs"></i>
+                    <i className="fas fa-scale-balanced text-[#D4AF37] text-xs"></i>
                     <span>EST. 1999 • LAW OFFICE OF MICHAEL HAILU APLC</span>
                   </div>
 
-                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.16] mb-6 text-white font-serif tracking-tight">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.16] mb-6 text-[#0A1128] font-serif tracking-tight">
                     Championing Justice for{" "}
                     <span
-                      className="italic font-normal bg-gradient-to-r from-purple-200 via-[var(--brand-light)] to-indigo-200 bg-clip-text text-transparent"
+                      className="italic font-normal text-[#D4AF37]"
                     >
                       California Families
                     </span>{" "}
                     for Over 25 Years
                   </h1>
 
-                  <p className="text-slate-300 text-base font-light leading-relaxed mb-8">
+                  <p className="text-[#0A1128] text-base font-medium leading-relaxed mb-8">
                     Aggressive in the courtroom. Compassionate with our clients. We defend victims of personal injuries, workplace discrimination, immigration challenges, and illegal housing practices across California.
                   </p>
 
@@ -90,14 +83,11 @@ export default function AboutPage() {
               <div className="lg:col-span-6 relative">
                 <Reveal>
                   <div className="relative mx-auto max-w-xl lg:max-w-none">
-                    {/* Glowing Backing Aura */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-[var(--brand-main)]/60 via-purple-600/40 to-[var(--brand-light)]/40 rounded-[36px] blur-3xl transform scale-105 pointer-events-none"></div>
-
                     {/* Main Picture Frame */}
                     <div className="image-glass-frame rounded-[36px] p-3 sm:p-4 relative z-10 overflow-hidden shadow-2xl bg-[#110e16] border border-white/20">
                       <div className="relative w-full aspect-[4/3] rounded-[28px] overflow-hidden bg-black/40 group">
                         <img
-                          src="/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg"
+                          src="/hero_modern_law_office.png"
                           alt="Law Office Trial Advocacy & Consultation Suite"
                           className="w-full h-full object-cover object-center rounded-[28px] brightness-105 contrast-105 transition-transform duration-700 group-hover:scale-[1.03]"
                         />
@@ -143,20 +133,20 @@ export default function AboutPage() {
                     <img
                       src="/ceo.jpg"
                       alt="Michael Hailu, Esq."
-                      className="w-full h-full object-contain object-center rounded-[28px] brightness-105"
+                      className="w-full h-full object-cover object-center rounded-[28px] brightness-105"
                     />
                   </div>
 
                   {/* Badge Overlay */}
-                  <div className="absolute -bottom-10 -right-10 sm:right-6 z-20 glass-card p-3.5 rounded-2xl border border-white/20 flex items-center gap-3.5 max-w-xs shadow-2xl">
-                    <div className="w-10 h-10 rounded-full flex-shrink-0 bg-[var(--brand-main)]/30 flex items-center justify-center text-[var(--brand-light)]">
+                  <div className="absolute -bottom-10 -right-10 sm:right-6 z-20 bg-white p-3.5 rounded-2xl border border-[var(--navy-border)] flex items-center gap-3.5 max-w-xs shadow-xl">
+                    <div className="w-10 h-10 rounded-full flex-shrink-0 bg-[var(--navy-primary)]/5 border border-[var(--navy-border)] flex items-center justify-center text-[var(--navy-primary)]">
                       <i className="fas fa-award text-lg"></i>
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-white">
+                      <div className="text-xs font-bold text-[var(--navy-primary)]">
                         Michael Hailu, Esq.
                       </div>
-                      <div className="text-[10px] text-slate-400">
+                      <div className="text-[10px] text-slate-500">
                         Managing Attorney
                       </div>
                     </div>
@@ -169,15 +159,14 @@ export default function AboutPage() {
             <div className="lg:col-span-7">
               <Reveal>
                 <div
-                  className="text-xs tracking-widest uppercase mb-3 font-semibold"
-                  style={{ color: "var(--brand-light)" }}
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-3 bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 shadow-sm"
                 >
                   Lead Practitioner
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white font-serif leading-tight">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-[#D4AF37] font-serif leading-tight">
                   Meet Attorney Michael Hailu
                 </h2>
-                <p className="text-slate-300 leading-relaxed mb-6 font-light">
+                <p className="text-black leading-relaxed mb-6 font-normal">
                   Founder and Principal Attorney Michael Hailu established the
                   Law Office of Michael Hailu APLC with a singular objective: to
                   provide real people with the highest standard of legal
@@ -186,7 +175,7 @@ export default function AboutPage() {
                   communication, empathetic client care, and relentless
                   courtroom strategy.
                 </p>
-                <p className="text-slate-400 leading-relaxed mb-8 text-sm">
+                <p className="text-black leading-relaxed mb-8 text-sm font-normal">
                   With over two decades of trial and litigation experience
                   across California state and federal courts, Michael has fought
                   for employees facing wrongful termination, families suffering
@@ -228,9 +217,9 @@ export default function AboutPage() {
                 </div>
 
                 {/* Quote Card */}
-                <div className="p-5 rounded-2xl border border-[var(--brand-main)]/30 bg-[#251e33]/40 relative">
-                  <i className="fas fa-quote-left text-2xl text-[var(--brand-light)]/20 absolute top-4 left-4"></i>
-                  <p className="text-xs sm:text-sm text-slate-200 italic font-light relative z-10 pl-6">
+                <div className="p-5 rounded-2xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 relative">
+                  <i className="fas fa-quote-left text-2xl text-[#D4AF37]/30 absolute top-4 left-4"></i>
+                  <p className="text-xs sm:text-sm text-[#0A1128] italic font-semibold relative z-10 pl-6">
                     &quot;Our legal system exists to safeguard human dignity.
                     When your rights are infringed upon, we don&apos;t just file
                     paperwork—we champion your cause.&quot;
@@ -242,30 +231,29 @@ export default function AboutPage() {
         </section>
 
     {/* 3. ACETERNITY UI TEAM SECTION BLOCK */}
-    <section className="py-24 relative overflow-hidden bg-[#0d0914]/80 border-y border-white/10">
+    <section className="py-24 relative overflow-hidden bg-[var(--bg-secondary)] border-y border-[var(--navy-border)]">
           {/* Ambient Lighting Orbs */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--brand-main)]/10 rounded-full blur-[170px] pointer-events-none z-0"></div>
-          <div className="absolute top-10 right-10 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--gold-accent)]/5 rounded-full blur-[170px] pointer-events-none z-0"></div>
+          <div className="absolute top-10 right-10 w-[400px] h-[400px] bg-blue-600/5 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
           <div className="wrapper relative z-10">
             {/* Section Header */}
             <Reveal className="text-center max-w-3xl mx-auto mb-16">
               <div
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-4 glass-card border-white/20"
-                style={{ color: "var(--brand-light)" }}
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-4 bg-white/50 border border-[var(--navy-border)] shadow-sm text-[var(--navy-primary)]"
               >
-                <i className="fas fa-users text-xs"></i>
+                <i className="fas fa-users text-xs text-[var(--gold-accent)]"></i>
                 <span>OUR ADVOCATES & LEGAL TEAM</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-white leading-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-[var(--navy-primary)] leading-tight mb-4">
                 The Legal Minds Behind{" "}
-                <span className="italic font-normal" style={{ color: "var(--brand-light)" }}>
+                <span className="italic font-normal text-[var(--gold-accent)]">
                   Your Defense
                 </span>
               </h2>
 
-              <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed max-w-2xl mx-auto">
+              <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
                 Our team of experienced trial attorneys, legal strategists, and client advocates work cohesively to deliver relentless courtroom defense and compassionate care.
               </p>
             </Reveal>
@@ -311,42 +299,42 @@ export default function AboutPage() {
                 },
               ].map((member) => (
                 <Reveal key={member.name} className="h-full">
-                  <div className="group relative rounded-3xl border border-white/15 bg-gradient-to-b from-[#1c1628]/90 via-[#130f1c]/90 to-[#0e0b14]/90 backdrop-blur-xl p-6 h-full flex flex-col justify-between hover:border-[var(--brand-light)]/60 transition-all duration-500 shadow-2xl hover:shadow-[var(--brand-main)]/20">
+                  <div className="group relative rounded-3xl border border-[var(--navy-border)] bg-white p-6 h-full flex flex-col justify-between hover:border-[var(--gold-accent)] transition-all duration-500 shadow-xl hover:shadow-2xl">
                     <div>
                       {/* Image Container with Hover Zoom & Floating Badge */}
-                      <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-5 border border-white/10 bg-black/40">
+                      <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-5 border border-[var(--navy-border)] bg-black/5">
                         <img
                           src={member.image}
                           alt={member.name}
                           className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 brightness-105 contrast-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0e0b14] via-transparent to-transparent pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
 
-                        <span className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-[10px] text-[var(--brand-light)] font-semibold uppercase tracking-wider">
+                        <span className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-[10px] text-white font-semibold uppercase tracking-wider">
                           {member.experience}
                         </span>
                       </div>
 
                       {/* Member Info */}
-                      <h3 className="text-xl font-bold text-white font-serif mb-1 group-hover:text-[var(--brand-light)] transition-colors">
+                      <h3 className="text-xl font-bold text-[var(--navy-primary)] font-serif mb-1 group-hover:text-[var(--gold-accent)] transition-colors">
                         {member.name}
                       </h3>
-                      <div className="text-xs font-semibold text-[var(--brand-light)] uppercase tracking-wider mb-3">
+                      <div className="text-xs font-semibold text-[var(--gold-accent)] uppercase tracking-wider mb-3">
                         {member.role}
                       </div>
-                      <p className="text-slate-300 text-xs font-light leading-relaxed mb-4">
+                      <p className="text-slate-600 text-xs font-medium leading-relaxed mb-4">
                         {member.bio}
                       </p>
                     </div>
 
                     {/* Footer Practice Badges & Email Link */}
-                    <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                      <span className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] text-slate-300 font-medium">
+                    <div className="pt-4 border-t border-[var(--navy-border)] flex items-center justify-between">
+                      <span className="px-2.5 py-1 rounded-full bg-slate-100 border border-[var(--navy-border)] text-[10px] text-[var(--navy-primary)] font-medium">
                         {member.practiceArea}
                       </span>
                       <a
                         href={`mailto:${member.email}`}
-                        className="w-8 h-8 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-slate-300 hover:text-white hover:border-[var(--brand-light)] hover:bg-[var(--brand-main)]/30 transition-all"
+                        className="w-8 h-8 rounded-full bg-slate-100 border border-[var(--navy-border)] flex items-center justify-center text-slate-500 hover:text-white hover:border-[var(--navy-primary)] hover:bg-[var(--navy-primary)] transition-all"
                         title={`Email ${member.name}`}
                       >
                         <i className="fas fa-envelope text-xs"></i>
@@ -360,19 +348,18 @@ export default function AboutPage() {
         </section>
 
         {/* 3. CORE PILLARS BENTO GRID */}
-        <section className="py-20 relative bg-black/20">
+        <section className="py-20 relative bg-[var(--bg-primary)]">
           <div className="wrapper">
             <Reveal className="text-center max-w-2xl mx-auto mb-16">
               <div
-                className="text-xs tracking-widest uppercase mb-3 font-semibold"
-                style={{ color: "var(--brand-light)" }}
+                className="text-xs tracking-widest uppercase mb-3 font-semibold text-[var(--navy-primary)]"
               >
                 Our Foundation
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white font-serif mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[var(--navy-primary)] font-serif mb-4">
                 Built Upon Four Unshakable Pillars
               </h2>
-              <p className="text-slate-400 text-sm">
+              <p className="text-slate-600 text-sm font-medium">
                 Every case we take is handled according to our strict internal
                 standards of integrity, excellence, and dedication.
               </p>
@@ -381,15 +368,15 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-6">
               {/* Pillar 1 */}
               <Reveal>
-                <div className="bento-card p-8 rounded-3xl h-full flex flex-col justify-between">
+                <div className="bento-card p-8 rounded-3xl h-full flex flex-col justify-between bg-white border border-[var(--navy-border)] shadow-md hover:shadow-xl transition-all duration-300">
                   <div className="mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-[var(--brand-main)]/20 border border-[var(--brand-light)]/30 flex items-center justify-center text-[var(--brand-light)] text-xl mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-[var(--navy-primary)]/5 border border-[var(--navy-border)] flex items-center justify-center text-[var(--navy-primary)] text-xl mb-6">
                       <i className="fas fa-heart"></i>
                     </div>
-                    <h3 className="text-xl font-bold text-white font-serif mb-3">
+                    <h3 className="text-xl font-bold text-[var(--navy-primary)] font-serif mb-3">
                       1. Empathetic Client Connection
                     </h3>
-                    <p className="text-slate-300 text-sm leading-relaxed font-light">
+                    <p className="text-slate-600 text-sm leading-relaxed font-medium">
                       We treat every client as a human being, not a case file
                       number. We take time to understand your emotional,
                       financial, and personal priorities before formulating our
@@ -405,21 +392,21 @@ export default function AboutPage() {
 
               {/* Pillar 2 */}
               <Reveal>
-                <div className="bento-card p-8 rounded-3xl h-full flex flex-col justify-between">
+                <div className="bento-card p-8 rounded-3xl h-full flex flex-col justify-between bg-white border border-[var(--navy-border)] shadow-md hover:shadow-xl transition-all duration-300">
                   <div className="mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-[var(--brand-main)]/20 border border-[var(--brand-light)]/30 flex items-center justify-center text-[var(--brand-light)] text-xl mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-[var(--navy-primary)]/5 border border-[var(--navy-border)] flex items-center justify-center text-[var(--navy-primary)] text-xl mb-6">
                       <i className="fas fa-user-shield"></i>
                     </div>
-                    <h3 className="text-xl font-bold text-white font-serif mb-3">
+                    <h3 className="text-xl font-bold text-[var(--navy-primary)] font-serif mb-3">
                       2. Direct Attorney Access
                     </h3>
-                    <p className="text-slate-300 text-sm leading-relaxed font-light">
+                    <p className="text-slate-600 text-sm leading-relaxed font-medium">
                       Unlike large settlement mills where clients are passed
                       down to paralegals, you work directly with Senior Attorney
                       Michael Hailu throughout your legal journey.
                     </p>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-[var(--brand-light)] font-medium">
+                  <div className="flex items-center gap-2 text-xs text-[var(--navy-primary)] font-semibold">
                     <span>Direct Accountability</span>
                     <i className="fas fa-check-circle text-xs"></i>
                   </div>
@@ -428,21 +415,21 @@ export default function AboutPage() {
 
               {/* Pillar 3 */}
               <Reveal>
-                <div className="bento-card p-8 rounded-3xl h-full flex flex-col justify-between">
+                <div className="bento-card p-8 rounded-3xl h-full flex flex-col justify-between bg-white border border-[var(--navy-border)] shadow-md hover:shadow-xl transition-all duration-300">
                   <div className="mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-[var(--brand-main)]/20 border border-[var(--brand-light)]/30 flex items-center justify-center text-[var(--brand-light)] text-xl mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-[var(--navy-primary)]/5 border border-[var(--navy-border)] flex items-center justify-center text-[var(--navy-primary)] text-xl mb-6">
                       <i className="fas fa-shield-halved"></i>
                     </div>
-                    <h3 className="text-xl font-bold text-white font-serif mb-3">
+                    <h3 className="text-xl font-bold text-[var(--navy-primary)] font-serif mb-3">
                       3. Uncompromising Strategy
                     </h3>
-                    <p className="text-slate-300 text-sm leading-relaxed font-light">
+                    <p className="text-slate-600 text-sm leading-relaxed font-medium">
                       We prepare every case as if it is going to trial. This
                       meticulous approach forces opposing counsel and insurance
                       conglomerates to negotiate from a position of weakness.
                     </p>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-[var(--brand-light)] font-medium">
+                  <div className="flex items-center gap-2 text-xs text-[var(--navy-primary)] font-semibold">
                     <span>Trial-Ready Preparation</span>
                     <i className="fas fa-check-circle text-xs"></i>
                   </div>
@@ -451,21 +438,21 @@ export default function AboutPage() {
 
               {/* Pillar 4 */}
               <Reveal>
-                <div className="bento-card p-8 rounded-3xl h-full flex flex-col justify-between">
+                <div className="bento-card p-8 rounded-3xl h-full flex flex-col justify-between bg-white border border-[var(--navy-border)] shadow-md hover:shadow-xl transition-all duration-300">
                   <div className="mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-[var(--brand-main)]/20 border border-[var(--brand-light)]/30 flex items-center justify-center text-[var(--brand-light)] text-xl mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-[var(--navy-primary)]/5 border border-[var(--navy-border)] flex items-center justify-center text-[var(--navy-primary)] text-xl mb-6">
                       <i className="fas fa-hand-holding-dollar"></i>
                     </div>
-                    <h3 className="text-xl font-bold text-white font-serif mb-3">
+                    <h3 className="text-xl font-bold text-[var(--navy-primary)] font-serif mb-3">
                       4. No Recovery, No Fee Promise
                     </h3>
-                    <p className="text-slate-300 text-sm leading-relaxed font-light">
+                    <p className="text-slate-600 text-sm leading-relaxed font-medium">
                       For personal injury and contingency cases, you pay zero
                       upfront costs or legal fees unless we win your case and
                       recover money on your behalf.
                     </p>
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-[var(--brand-light)] font-medium">
+                  <div className="flex items-center gap-2 text-xs text-[var(--navy-primary)] font-semibold">
                     <span>Contingency Protection</span>
                     <i className="fas fa-check-circle text-xs"></i>
                   </div>
@@ -479,21 +466,21 @@ export default function AboutPage() {
         <HistoryTimeline />
 
         {/* 5. ACETERNITY UI EXACT MINIMALIST CTA BLOCK FROM SCREENSHOT */}
-        <section className="py-20 lg:py-28 relative overflow-hidden bg-[#09090b] border-t border-white/10">
+        <section className="py-20 lg:py-28 relative overflow-hidden bg-[var(--bg-primary)] border-t border-[var(--navy-border)]">
           <div className="wrapper relative z-10">
             <Reveal>
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-10 max-w-6xl mx-auto">
                 
                 {/* Left Side: Headline, Copy, Overlapping Avatars & Rating */}
                 <div className="max-w-2xl text-left">
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-serif tracking-tight leading-[1.15] mb-6">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-primary)] font-serif tracking-tight leading-[1.15] mb-6">
                     Get fearless legal defense with <br className="hidden sm:inline" />
-                    <span className="bg-gradient-to-r from-purple-200 via-[var(--brand-light)] to-indigo-200 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[var(--gold-dark)] via-[var(--gold-accent)] to-[var(--gold-dark)] bg-clip-text text-transparent">
                       Michael Hailu, APLC today.
                     </span>
                   </h2>
 
-                  <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed mb-8 max-w-xl">
+                  <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed mb-8 max-w-xl">
                     Schedule a 100% free confidential consultation with our senior trial counsel. Experience dedicated legal representation and zero upfront costs across California.
                   </p>
 
@@ -504,27 +491,27 @@ export default function AboutPage() {
                         <img
                           src="/ceo.jpg"
                           alt="Michael Hailu, Esq."
-                          className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[#09090b]"
+                          className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[var(--bg-primary)]"
                         />
                         <img
                           src="/person1.jpg"
                           alt="Senior Associate"
-                          className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[#09090b]"
+                          className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[var(--bg-primary)]"
                         />
                         <img
                           src="/person2.jpg"
                           alt="Immigration Counsel"
-                          className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[#09090b]"
+                          className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[var(--bg-primary)]"
                         />
                         <img
                           src="/person3.jpg"
                           alt="Client Advocate"
-                          className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[#09090b]"
+                          className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[var(--bg-primary)]"
                         />
                         <img
                           src="/background.jpeg"
                           alt="Trial Associate"
-                          className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[#09090b]"
+                          className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[var(--bg-primary)]"
                         />
                       </div>
                       
@@ -536,8 +523,8 @@ export default function AboutPage() {
                       </div>
                     </div>
 
-                    <div className="text-xs text-slate-400 font-light">
-                      Trusted by <span className="text-white font-medium">1,000+</span> California families
+                    <div className="text-xs text-slate-600 font-medium">
+                      Trusted by <span className="text-[var(--navy-primary)] font-bold">1,000+</span> California families
                     </div>
                   </div>
                 </div>
@@ -546,7 +533,7 @@ export default function AboutPage() {
                 <div className="flex items-center shrink-0">
                   <Link
                     href="/#contact"
-                    className="px-8 py-4 rounded-xl text-sm font-semibold tracking-wide text-white bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-600/30 hover:scale-[1.03] transition-all duration-300 inline-flex items-center gap-2"
+                    className="px-8 py-4 rounded-xl text-sm font-bold tracking-wide text-[var(--navy-primary)] bg-[var(--gold-accent)] hover:bg-[var(--gold-dark)] hover:text-white shadow-lg shadow-black/10 hover:scale-[1.03] transition-all duration-300 inline-flex items-center gap-2"
                   >
                     <span>Book a call</span>
                     <i className="fas fa-arrow-right text-xs"></i>
@@ -558,7 +545,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

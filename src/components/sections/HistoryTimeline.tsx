@@ -79,33 +79,31 @@ export default function HistoryTimeline() {
   ];
 
   return (
-    <section className="py-28 relative overflow-hidden bg-[#0d0915]/60 border-t border-white/10">
+    <section className="py-28 relative overflow-hidden bg-[var(--bg-secondary)] border-t border-[var(--navy-border)]">
       {/* Ambient Lighting Background Orbs */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[var(--brand-main)]/15 rounded-full blur-[180px] pointer-events-none z-0"></div>
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[var(--gold-accent)]/5 rounded-full blur-[180px] pointer-events-none z-0"></div>
+      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
       <div className="wrapper max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <Reveal className="text-center max-w-3xl mx-auto mb-12">
           <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-4 glass-card border-white/20"
-            style={{ color: "var(--brand-light)" }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase mb-4 bg-white/50 border border-[var(--navy-border)] shadow-sm text-[var(--navy-primary)]"
           >
-            <i className="fas fa-clock-rotate-left text-xs"></i>
+            <i className="fas fa-clock-rotate-left text-xs text-[var(--gold-accent)]"></i>
             <span>OUR JOURNEY & HERITAGE</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-serif leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--navy-primary)] font-serif leading-tight mb-4">
             Over 25 Years of Standing Up for{" "}
             <span
-              className="italic font-normal"
-              style={{ color: "var(--brand-light)" }}
+              className="italic font-normal text-[var(--gold-accent)]"
             >
               California Families
             </span>
           </h2>
 
-          <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
             Explore the key milestones and trial victories that have defined the
             Law Office of Michael Hailu APLC since 1999.
           </p>
@@ -113,8 +111,8 @@ export default function HistoryTimeline() {
 
         {/* Header Controls Bar */}
         <div className="flex items-center justify-between gap-4 mb-6 px-2">
-          <span className="flex items-center gap-2 uppercase tracking-wider text-[11px] text-[var(--brand-light)] font-bold">
-            <span className="w-2 h-2 rounded-full bg-[var(--brand-light)] animate-ping"></span>
+          <span className="flex items-center gap-2 uppercase tracking-wider text-[11px] text-[var(--navy-primary)] font-bold">
+            <span className="w-2 h-2 rounded-full bg-[var(--gold-accent)] animate-ping"></span>
             Interactive Timeline • Drag or Click Arrows
           </span>
 
@@ -122,14 +120,14 @@ export default function HistoryTimeline() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => handleScroll("left")}
-              className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[var(--brand-main)]/50 hover:border-[var(--brand-light)]/50 transition-all shadow-lg active:scale-95"
+              className="w-10 h-10 rounded-full bg-white border border-[var(--navy-border)] flex items-center justify-center text-slate-500 hover:text-[var(--navy-primary)] hover:border-[var(--navy-primary)] transition-all shadow-sm hover:shadow-md active:scale-95"
               aria-label="Scroll left"
             >
               <i className="fas fa-chevron-left text-xs"></i>
             </button>
             <button
               onClick={() => handleScroll("right")}
-              className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[var(--brand-main)]/50 hover:border-[var(--brand-light)]/50 transition-all shadow-lg active:scale-95"
+              className="w-10 h-10 rounded-full bg-white border border-[var(--navy-border)] flex items-center justify-center text-slate-500 hover:text-[var(--navy-primary)] hover:border-[var(--navy-primary)] transition-all shadow-sm hover:shadow-md active:scale-95"
               aria-label="Scroll right"
             >
               <i className="fas fa-chevron-right text-xs"></i>
@@ -154,42 +152,42 @@ export default function HistoryTimeline() {
               key={item.year}
               className="snap-start shrink-0 w-[310px] sm:w-[380px] lg:w-[440px] h-full"
             >
-              <div className="group relative rounded-[32px] border border-white/20 bg-gradient-to-b from-[#1c152a]/95 via-[#130f1c]/95 to-[#0e0a15]/95 backdrop-blur-xl p-7 sm:p-9 h-full flex flex-col justify-between hover:border-[var(--brand-light)]/60 transition-all duration-500 shadow-2xl hover:shadow-[var(--brand-main)]/25 hover:-translate-y-1.5">
+              <div className="group relative rounded-[32px] border border-[var(--navy-border)] bg-white p-7 sm:p-9 h-full flex flex-col justify-between hover:border-[var(--gold-accent)] transition-all duration-500 shadow-md hover:shadow-xl hover:-translate-y-1.5">
                 {/* Glowing Top Ambient Pill */}
-                <div className="absolute -top-16 right-8 w-44 h-44 bg-[var(--brand-light)]/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div className="absolute -top-16 right-8 w-44 h-44 bg-[var(--gold-accent)]/5 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div>
                   {/* Top Header Row */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3">
-                      <span className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-[var(--brand-main)]/30 border border-[var(--brand-light)]/40 flex items-center justify-center text-sm font-bold text-white shadow-xl group-hover:scale-105 group-hover:border-[var(--brand-light)] transition-all font-serif">
+                      <span className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-[var(--navy-primary)]/5 border border-[var(--navy-border)] flex items-center justify-center text-sm font-bold text-[var(--navy-primary)] shadow-sm group-hover:scale-105 group-hover:border-[var(--gold-accent)] group-hover:text-[var(--gold-accent)] transition-all font-serif">
                         {item.year}
                       </span>
-                      <span className="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-[var(--brand-light)] font-semibold uppercase tracking-wider">
+                      <span className="px-3 py-1.5 rounded-full bg-slate-100 border border-[var(--navy-border)] text-[11px] text-[var(--gold-accent)] font-semibold uppercase tracking-wider">
                         {item.category}
                       </span>
                     </div>
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl font-bold text-white font-serif mb-4 group-hover:text-[var(--brand-light)] transition-colors leading-snug">
+                  <h3 className="text-xl font-bold text-[var(--navy-primary)] font-serif mb-4 group-hover:text-[var(--gold-accent)] transition-colors leading-snug">
                     {item.title}
                   </h3>
 
-                  <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-8">
+                  <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed mb-8">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Stat Footer Pill */}
-                <div className="pt-5 border-t border-white/10 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/15 text-xs text-white font-semibold shadow-md">
+                <div className="pt-5 border-t border-[var(--navy-border)] flex items-center justify-between">
+                  <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-100 border border-[var(--navy-border)] text-xs text-[var(--navy-primary)] font-semibold shadow-sm">
                     <i
-                      className={`fas ${item.icon} text-[var(--brand-light)] text-xs`}
+                      className={`fas ${item.icon} text-[var(--gold-accent)] text-xs`}
                     ></i>
                     <span>{item.stat}</span>
                   </span>
-                  <span className="w-8 h-8 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-slate-400 group-hover:text-[var(--brand-light)] group-hover:bg-[var(--brand-main)]/30 group-hover:border-[var(--brand-light)]/40 transition-all">
+                  <span className="w-8 h-8 rounded-full bg-slate-100 border border-[var(--navy-border)] flex items-center justify-center text-slate-500 group-hover:text-white group-hover:bg-[var(--navy-primary)] group-hover:border-[var(--navy-primary)] transition-all">
                     <i className="fas fa-arrow-right text-xs"></i>
                   </span>
                 </div>

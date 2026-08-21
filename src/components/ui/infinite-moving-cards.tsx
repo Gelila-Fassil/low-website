@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 
 export interface TestimonialItem {
   quote: string;
@@ -30,11 +30,35 @@ export const InfiniteMovingCards = ({
 
   const [start, setStart] = useState(false);
 
-  useEffect(() => {
-    addAnimation();
-  }, []);
+  const getDirection = useCallback(() => {
+    if (containerRef.current) {
+      if (direction === "left") {
+        containerRef.current.style.setProperty(
+          "--animation-direction",
+          "forwards"
+        );
+      } else {
+        containerRef.current.style.setProperty(
+          "--animation-direction",
+          "reverse"
+        );
+      }
+    }
+  }, [direction]);
 
-  function addAnimation() {
+  const getSpeed = useCallback(() => {
+    if (containerRef.current) {
+      if (speed === "fast") {
+        containerRef.current.style.setProperty("--animation-duration", "45s");
+      } else if (speed === "normal") {
+        containerRef.current.style.setProperty("--animation-duration", "75s");
+      } else {
+        containerRef.current.style.setProperty("--animation-duration", "120s");
+      }
+    }
+  }, [speed]);
+
+  const addAnimation = useCallback(() => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
@@ -49,35 +73,11 @@ export const InfiniteMovingCards = ({
       getSpeed();
       setStart(true);
     }
-  }
+  }, [getDirection, getSpeed]);
 
-  const getDirection = () => {
-    if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards"
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse"
-        );
-      }
-    }
-  };
-
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "45s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "75s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "120s");
-      }
-    }
-  };
+  useEffect(() => {
+    addAnimation();
+  }, [addAnimation]);
 
   return (
     <div

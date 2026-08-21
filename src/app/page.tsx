@@ -1,31 +1,23 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/sections/Hero";
-import About from "../components/sections/About";
-import PracticeAreas from "../components/sections/PracticeAreas";
-import Stats from "../components/sections/Stats";
-import Method from "../components/sections/Method";
-import CaseStudies from "../components/sections/CaseStudies";
-import Testimonials from "../components/sections/Testimonials";
-import Team from "../components/sections/Team";
-import Contact from "../components/sections/Contact";
-import Footer from "../components/sections/Footer";
+import Hero from "@/components/sections/Hero";
+import PracticeAreas from "@/components/sections/PracticeAreas";
+import About from "@/components/sections/About";
+import TenantFeature from "@/components/sections/TenantFeature";
+import AttorneySpotlight from "@/components/sections/AttorneySpotlight";
+import Testimonials from "@/components/sections/Testimonials";
+import OfficeLocations from "@/components/sections/OfficeLocations";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <PracticeAreas />
-        <Stats />
-        <Method />
-        {/* <CaseStudies /> */}
-        <Testimonials />
-        <Team />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <Hero />
+      <PracticeAreas />
+      <About />
+      <TenantFeature />
+      <AttorneySpotlight />
+      <Testimonials />
+      <OfficeLocations />
+      <Contact />
+    </main>
   );
 }

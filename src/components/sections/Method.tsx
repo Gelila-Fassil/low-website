@@ -56,7 +56,7 @@ export default function Method() {
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Our senior partners draft a multi-layered strategy. We run
-                thousands of simulations to anticipate opposing counsel's moves,
+                thousands of simulations to anticipate opposing counsel&apos;s moves,
                 preparing counter-arguments 3 steps ahead.
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function Method() {
                 04. Future-Proofing
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                We don't just win cases; we set precedents. We structure
+                We don&apos;t just win cases; we set precedents. We structure
                 settlements and rulings to protect your interests for decades to
                 come, preventing future liabilities.
               </p>
