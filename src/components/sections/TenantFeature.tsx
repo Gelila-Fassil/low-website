@@ -1,29 +1,34 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import {
+  IconBiohazard,
+  IconBolt,
+  IconBug,
+  IconDroplet,
+} from "@tabler/icons-react";
 
 export default function TenantFeature() {
   const features = [
     {
       title: "Mold & Mildew",
       desc: "Helping tenants address unhealthy living conditions caused by persistent mold and moisture.",
-      icon: "fa-disease",
+      icon: IconBiohazard,
     },
     {
       title: "Pest Infestation",
       desc: "Protecting tenants dealing with roaches, rodents, and other unresolved pest problems.",
-      icon: "fa-bug",
+      icon: IconBug,
     },
     {
       title: "Water Leaks & Plumbing",
       desc: "Assisting tenants facing ongoing leaks, water damage, and serious plumbing issues.",
-      icon: "fa-faucet-drip",
+      icon: IconDroplet,
     },
     {
       title: "Electrical Problems",
       desc: "Helping tenants address unsafe electrical conditions that may put their home and safety at risk.",
-      icon: "fa-bolt",
+      icon: IconBolt,
     },
   ];
 
@@ -34,7 +39,6 @@ export default function TenantFeature() {
 
       <div className="wrapper relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
           {/* Left Column: Content */}
           <div className="lg:col-span-5 space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0A1128]/5 text-[#0A1128] text-[10px] font-bold uppercase tracking-widest border border-[#D4AF37]/30 shadow-sm">
@@ -47,7 +51,8 @@ export default function TenantFeature() {
             </h2>
 
             <p className="text-neutral-600 text-base md:text-lg font-medium leading-relaxed max-w-xl">
-              You deserve a safe and livable home. We’re here to help protect your rights.
+              You deserve a safe and livable home. We’re here to help protect
+              your rights.
             </p>
 
             <div className="pt-2">
@@ -63,12 +68,16 @@ export default function TenantFeature() {
           {/* Right Column: Grid of Issues */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {features.map((feature, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="p-6 rounded-2xl bg-white border border-neutral-200 hover:border-[#D4AF37] transition-all duration-300 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] group hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0A1128] border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] text-xl mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md">
-                  <i className={`fas ${feature.icon}`}></i>
+                <div className="w-12 h-12 rounded-xl bg-[#0A1128] border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <feature.icon
+                    className="h-6 w-6"
+                    stroke={2}
+                    aria-hidden="true"
+                  />
                 </div>
                 <h3 className="text-[#0A1128] font-bold text-lg mb-2">
                   {feature.title}
@@ -79,7 +88,6 @@ export default function TenantFeature() {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>
