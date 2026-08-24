@@ -4,7 +4,7 @@ export function getOrganizationSchema() {
     "@type": "LegalService",
     "name": "Law Office of Michael Hailu APLC",
     "url": "https://www.hailulawyers.com",
-    "logo": "https://www.hailulawyers.com/ceo.jpg",
+    "logo": "https://www.hailulawyers.com/ceo1.jpg",
     "description":
       "Experienced California legal representation in Employment Law, Tenant Habitability, Personal Injury, and Immigration Law. Serving Los Angeles and Oakland.",
     "telephone": "(213) 455-5595",
@@ -42,7 +42,7 @@ export function getAttorneySchema() {
       "name": "Law Office of Michael Hailu APLC",
     },
     "url": "https://www.hailulawyers.com/attorneys/michael-hailu",
-    "image": "https://www.hailulawyers.com/ceo.jpg",
+    "image": "https://www.hailulawyers.com/ceo1.jpg",
     "telephone": "(213) 455-5595",
   };
 }

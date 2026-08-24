@@ -56,7 +56,7 @@ export default function AttorneysHubPage() {
           <div className="navy-card p-8 rounded-3xl border border-[#D4AF37]/40 shadow-2xl space-y-6 text-center">
             <div className="relative w-44 h-44 mx-auto rounded-full overflow-hidden border-2 border-[#D4AF37] shadow-lg">
               <Image
-                src="/ceo.jpg"
+                src="/ceo1.jpg"
                 alt="Michael Hailu"
                 fill
                 className="object-cover object-top"

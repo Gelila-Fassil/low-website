@@ -20,11 +20,11 @@ export default function Hero() {
 
       <div className="wrapper relative z-10 w-full pt-32 pb-20 flex items-center">
         <div className="max-w-2xl text-left">
-          <h1 className="mb-7 max-w-xl text-5xl leading-[0.98] text-white font-serif-heading drop-shadow-[0_3px_5px_rgba(0,0,0,0.55)] sm:text-6xl md:text-7xl animate-slide-up" style={{ animationDelay: "100ms" }}>
-            <span className="text-[#D4AF37]">Pursuing Your Justice</span>
+          <h1 className="mb-3 max-w-2xl text-xs leading-[1.5] !text-[#D4AF37] font-serif-heading drop-shadow-[0_3px_5px_rgba(0,0,0,0.55)] sm:text-sm md:text-base animate-slide-up" style={{ animationDelay: "100ms" }}>
+            Protecting Your Rights. Pursuing the Results You Deserve.
           </h1>
 
-          <p className="mb-10 max-w-xl text-base leading-[1.65] text-white/85 sm:text-lg md:text-xl animate-slide-up drop-shadow-[0_2px_3px_rgba(0,0,0,0.7)]" style={{ animationDelay: "200ms" }}>
+          <p className="mb-6 max-w-2xl text-[10px] leading-[1.6] text-white/85 sm:text-xs md:text-sm animate-slide-up drop-shadow-[0_2px_3px_rgba(0,0,0,0.7)]" style={{ animationDelay: "200ms" }}>
             Experienced legal representation for individuals, families, employees, tenants, and injury victims throughout California.
           </p>
 

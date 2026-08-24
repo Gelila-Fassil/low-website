@@ -21,14 +21,46 @@ export default function Navbar() {
 
   const navLinks = [
     { title: "Home", href: "/" },
-    { title: "About", href: "/about" },
+    { title: "About Us", href: "/about-us" },
     { title: "Attorneys", href: "/attorneys" },
-    { title: "Practices", href: "/practice-areas" },
-    { title: "Results", href: "/results-testimonials" },
-    { title: "Contact", href: "/#contact" },
+    { title: "Practice Areas", href: "/practice-areas" },
+    { title: "Results & Testimonials", href: "/results-testimonials" },
+    { title: "Resources", href: "/resources" },
+    { title: "Contact", href: "/contact" },
   ];
 
   return (
+    <>
+      {/* Utility Bar */}
+      <div className="fixed top-0 left-0 right-0 h-[36px] sm:h-[38px] bg-[#0A1128] text-white z-50 flex items-center justify-between px-4 sm:px-6 lg:px-8 text-xs font-medium tracking-wide shadow-md">
+        <div className="flex items-center gap-4 sm:gap-6">
+          <Link href="/locations/los-angeles" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5 hidden md:flex">
+            <i className="fas fa-location-dot text-[#D4AF37]"></i> Los Angeles
+          </Link>
+          <Link href="/locations/oakland" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5 hidden md:flex">
+            <i className="fas fa-location-dot text-[#D4AF37]"></i> Oakland
+          </Link>
+          
+          {/* Language Selector (Prepared for later translation) */}
+          <div className="flex items-center gap-1.5 relative group cursor-pointer">
+            <i className="fas fa-globe text-[#D4AF37]"></i>
+            <span className="group-hover:text-[#D4AF37] transition-colors">English</span>
+            <i className="fas fa-chevron-down text-[8px] text-[#D4AF37] pt-0.5"></i>
+            <div className="absolute top-full left-0 mt-2 w-32 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2 border border-neutral-100">
+              <div className="px-4 py-1.5 text-xs text-[#0A1128] font-bold hover:bg-neutral-50 hover:text-[#D4AF37]">English</div>
+              <div className="px-4 py-1.5 text-xs text-[#0A1128] font-bold hover:bg-neutral-50 hover:text-[#D4AF37]">Amharic</div>
+              <div className="px-4 py-1.5 text-xs text-[#0A1128] font-bold hover:bg-neutral-50 hover:text-[#D4AF37]">Spanish</div>
+              <div className="px-4 py-1.5 text-xs text-[#0A1128] font-bold hover:bg-neutral-50 hover:text-[#D4AF37]">Tigrigna</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="tel:2134555595" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5 font-bold md:hidden">
+            <i className="fas fa-phone text-[#D4AF37]"></i> CALL NOW
+          </a>
+        </div>
+      </div>
+
     <header
       className={`fixed top-[36px] sm:top-[38px] left-0 right-0 z-40 transition-all duration-500 px-4 sm:px-6 lg:px-8 ${
         scrolled
@@ -63,7 +95,7 @@ export default function Navbar() {
               <Link
                 key={link.title}
                 href={link.href}
-                className={`text-[11px] font-extrabold tracking-[0.2em] uppercase transition-all duration-300 relative py-2 ${
+                className={`text-[11px] whitespace-nowrap font-extrabold tracking-[0.2em] uppercase transition-all duration-300 relative py-2 ${
                   isActive
                     ? "text-[#D4AF37]"
                     : "text-[#0A1128] hover:text-[#D4AF37]"
@@ -152,5 +184,6 @@ export default function Navbar() {
         </div>
       </div>
     </header>
+    </>
   );
 }

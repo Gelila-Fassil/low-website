@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function PracticeAreas() {
   const practices = [
@@ -8,6 +9,7 @@ export default function PracticeAreas() {
       id: "employment-law",
       title: "Employment Law",
       icon: "fa-briefcase",
+      image: "/employ.jpg",
       featureHeadline: "YOUR WORKPLACE RIGHTS MATTER.",
       supportingText:
         "You deserve fair treatment and fair pay. We’re here to help protect your rights in the workplace.",
@@ -36,6 +38,7 @@ export default function PracticeAreas() {
       id: "tenant-habitability",
       title: "Tenant Habitability",
       icon: "fa-house-circle-exclamation",
+      image: "/Tenant .jpg",
       featureHeadline: "YOU DON'T HAVE TO LIVE IN UNSAFE OR UNHEALTHY CONDITIONS.",
       supportingText:
         "You deserve a safe and livable home. We’re here to help protect your rights.",
@@ -64,6 +67,7 @@ export default function PracticeAreas() {
       id: "personal-injury",
       title: "Personal Injury",
       icon: "fa-user-injured",
+      image: "/PersonalInjury .jpg",
       featureHeadline: "INJURED BECAUSE OF SOMEONE ELSE’S NEGLIGENCE?",
       supportingText:
         "An unexpected injury can change your life. We’re here to help you understand your rights and legal options.",
@@ -88,6 +92,7 @@ export default function PracticeAreas() {
       id: "immigration-law",
       title: "Immigration Law",
       icon: "fa-passport",
+      image: "/IMMIGRATION.jpg",
       featureHeadline: "YOUR IMMIGRATION JOURNEY DESERVES TRUSTED LEGAL GUIDANCE.",
       supportingText:
         "Whether you’re pursuing permanent residency, citizenship, or bringing family together, we’re here to guide you through the legal process.",
@@ -127,59 +132,79 @@ export default function PracticeAreas() {
         </div>
 
         {/* Grid of Practice Area Cards */}
-        <div className="space-y-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           {practices.map((area, index) => (
             <div
               key={area.id}
-              className="bg-white p-8 lg:p-10 rounded-2xl border border-neutral-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden hover:border-[#D4AF37] transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]"
+              className="bg-white rounded-3xl border border-neutral-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative overflow-visible hover:border-[#D4AF37]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgb(0,0,0,0.12)] flex flex-col group mt-8 h-full"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                {/* Left Side: Category Header & CTA */}
-                <div className="lg:col-span-5 space-y-5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-xl bg-[#0A1128] text-[#D4AF37] flex items-center justify-center text-xl font-bold shadow-md">
-                      <i className={`fas ${area.icon}`}></i>
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-[#D4AF37] font-bold uppercase tracking-widest block">
-                        Practice Area 0{index + 1}
-                      </span>
-                      <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-[#0A1128] mt-0.5">
-                        {area.title}
-                      </h3>
-                    </div>
-                  </div>
-
-                  <h4 className="text-base sm:text-lg font-serif-heading text-[#0A1128] font-bold leading-snug">
+              {/* Small Banner Section */}
+              <div className="relative w-full h-32 sm:h-40 overflow-hidden rounded-t-3xl shrink-0">
+                <div className="absolute inset-0 bg-[#0A1128]/40 z-10 group-hover:bg-[#0A1128]/20 transition-colors duration-500" />
+                <Image
+                  src={area.image}
+                  alt={area.title}
+                  fill
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
+                />
+                <div className="absolute top-4 right-4 z-20">
+                  <span className="text-[10px] text-white/90 font-bold uppercase tracking-widest bg-black/40 px-3 py-1 rounded-full backdrop-blur-md border border-white/20 shadow-sm">
+                    Practice Area 0{index + 1}
+                  </span>
+                </div>
+              </div>
+              
+              {/* Overlapping Icon */}
+              <div className="px-6 lg:px-8 relative">
+                <div className="absolute -top-8 left-6 lg:left-8 w-16 h-16 rounded-xl bg-[#0A1128] text-[#D4AF37] flex items-center justify-center text-2xl shadow-xl border-[4px] border-white z-30 transform group-hover:-translate-y-1 transition-transform duration-300">
+                  <i className={`fas ${area.icon}`}></i>
+                </div>
+              </div>
+              
+              {/* Content Section */}
+              <div className="pt-10 pb-6 px-6 lg:px-8 flex flex-col grow">
+                {/* Category Header & CTA */}
+                <div className="space-y-3 mb-5">
+                  <h3 className="text-2xl sm:text-3xl font-bold font-serif-heading text-[#0A1128]">
+                    {area.title}
+                  </h3>
+                  
+                  <h4 className="text-lg sm:text-xl font-serif-heading text-[#0A1128] font-bold leading-snug relative pb-2 inline-block">
                     {area.featureHeadline}
+                    <div className="absolute bottom-0 left-0 w-1/3 h-1 bg-[#D4AF37] rounded-full"></div>
                   </h4>
 
-                  <p className="text-neutral-600 text-sm font-medium leading-relaxed">
+                  <p className="text-neutral-600 text-base font-medium leading-relaxed">
                     {area.supportingText}
                   </p>
 
-                  <div className="pt-2">
+                  <div className="pt-1">
                     <Link
                       href={area.ctaHref}
-                      className="bg-[#0A1128] hover:bg-[#1a2b5e] text-white px-6 py-3.5 rounded-full text-xs uppercase tracking-widest font-bold inline-block text-center shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 border border-[#0A1128]"
+                      className="group/btn inline-flex items-center gap-2 bg-transparent text-[#0A1128] px-0 py-1 text-sm uppercase tracking-widest font-bold transition-all duration-300"
                     >
-                      {area.ctaText}
+                      <span className="border-b-2 border-[#0A1128] group-hover/btn:border-[#D4AF37] group-hover/btn:text-[#D4AF37] transition-colors pb-0.5">
+                         {area.ctaText}
+                      </span>
+                      <div className="w-8 h-8 rounded-full bg-[#0A1128] group-hover/btn:bg-[#D4AF37] text-white flex items-center justify-center transition-colors shadow-md">
+                         <i className="fas fa-arrow-right text-xs"></i>
+                      </div>
                     </Link>
                   </div>
                 </div>
 
-                {/* Right Side: Specific Issues Handled */}
-                <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Specific Issues Handled */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-auto">
                   {area.subItems.map((sub, i) => (
                     <div
                       key={i}
-                      className="p-5 rounded-xl bg-neutral-50 border border-neutral-200 hover:border-[#D4AF37] hover:bg-white hover:scale-[1.02] transition-all duration-300 space-y-2 shadow-sm"
+                      className="p-3 rounded-xl bg-[#F8F9FA] border border-neutral-100 hover:border-[#D4AF37]/30 hover:bg-white hover:shadow-sm transition-all duration-300 space-y-1 group/item"
                     >
-                      <div className="flex items-center gap-2 text-[#D4AF37]">
-                        <i className="fas fa-circle-check text-xs"></i>
+                      <div className="flex items-center gap-2">
+                        <i className="fas fa-check-circle text-[#D4AF37] text-sm group-hover/item:scale-110 transition-transform"></i>
                         <h5 className="text-sm font-bold text-[#0A1128]">{sub.name}</h5>
                       </div>
-                      <p className="text-xs text-neutral-500 font-medium leading-relaxed">
+                      <p className="text-sm text-neutral-500 font-medium leading-snug pl-6">
                         {sub.desc}
                       </p>
                     </div>

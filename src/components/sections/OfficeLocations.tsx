@@ -4,17 +4,17 @@ import Link from "next/link";
 
 export default function OfficeLocations() {
   return (
-    <section className="py-20 bg-[#F5F3EF] relative border-b border-neutral-200">
+    <section className="py-20 bg-[#0A1128] relative border-b border-white/10">
       <div className="wrapper">
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0A1128]/5 text-[#0A1128] text-xs font-bold uppercase tracking-widest border border-[#D4AF37]/30">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-widest border border-[#D4AF37]/50">
             <i className="fas fa-location-dot text-[#D4AF37]"></i>
             <span>California Office Locations</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-serif-heading text-[#0A1128]">
+          <h2 className="text-3xl sm:text-4xl font-bold font-serif-heading text-[#D4AF37]" style={{ color: '#D4AF37' }}>
             Serving Southern & Northern California
           </h2>
-          <p className="text-neutral-600 text-sm font-medium">
+          <p className="text-white/80 text-sm font-medium">
             Conveniently located offices in Los Angeles and Oakland to represent clients throughout California.
           </p>
         </div>
@@ -22,15 +22,15 @@ export default function OfficeLocations() {
         {/* Both Offices Displayed with Equal Visual Prominence */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Los Angeles Office */}
-          <div className="bg-white p-8 rounded-3xl border border-neutral-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative space-y-6 flex flex-col justify-between hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300">
+          <div className="bg-white/5 p-8 rounded-3xl border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative space-y-6 flex flex-col justify-between hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300">
             <div className="space-y-4">
-              <div className="flex items-center justify-between border-b border-neutral-100 pb-4">
+              <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#0A1128] text-[#D4AF37] flex items-center justify-center font-bold shadow-md border border-[#D4AF37]/20">
+                  <div className="w-10 h-10 rounded-full bg-white/10 text-[#D4AF37] flex items-center justify-center font-bold shadow-md border border-[#D4AF37]/20">
                     <i className="fas fa-city text-base"></i>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold font-serif-heading text-[#0A1128]">
+                    <h3 className="text-xl font-bold font-serif-heading text-white">
                       LOS ANGELES OFFICE
                     </h3>
                     <span className="text-xs text-[#D4AF37] font-bold tracking-wider">
@@ -38,16 +38,16 @@ export default function OfficeLocations() {
                     </span>
                   </div>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-[#0A1128]/5 text-[#0A1128] text-[11px] font-bold border border-[#D4AF37]/30 hidden sm:block">
+                <span className="px-3 py-1 rounded-full bg-[#D4AF37]/10 text-white text-[11px] font-bold border border-[#D4AF37]/30 hidden sm:block">
                   Primary Location
                 </span>
               </div>
 
-              <div className="space-y-3 text-sm text-neutral-600 font-medium">
+              <div className="space-y-3 text-sm text-white/80 font-medium">
                 <div className="flex items-start gap-3">
                   <i className="fas fa-location-dot text-[#D4AF37] mt-1"></i>
                   <div>
-                    <p className="font-bold text-[#0A1128]">3435 Wilshire Blvd, Suite 2285</p>
+                    <p className="font-bold text-white">3435 Wilshire Blvd, Suite 2285</p>
                     <p>Los Angeles, CA 90010</p>
                   </div>
                 </div>
@@ -56,7 +56,7 @@ export default function OfficeLocations() {
                   <i className="fas fa-phone-volume text-[#D4AF37]"></i>
                   <a
                     href="tel:2134555595"
-                    className="font-bold text-[#0A1128] hover:text-[#D4AF37] transition-colors text-base"
+                    className="font-bold text-white hover:text-[#D4AF37] transition-colors text-base"
                   >
                     (213) 455-5595
                   </a>
@@ -68,7 +68,7 @@ export default function OfficeLocations() {
                     href="https://www.hailulawyers.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-neutral-500 hover:text-[#D4AF37] underline font-medium"
+                    className="text-xs text-white/60 hover:text-[#D4AF37] underline font-medium"
                   >
                     www.hailulawyers.com
                   </a>
@@ -93,13 +93,13 @@ export default function OfficeLocations() {
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
               <Link
                 href="/locations/los-angeles"
-                className="border border-[#D4AF37] bg-white text-[#0A1128] hover:bg-[#0A1128] hover:text-white hover:border-[#0A1128] transition-colors w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider"
+                className="border border-[#D4AF37] bg-transparent text-white hover:bg-[#D4AF37] hover:text-[#0A1128] transition-colors w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider"
               >
                 LOS ANGELES OFFICE DETAILS
               </Link>
               <a
                 href="tel:2134555595"
-                className="bg-[#0A1128] hover:bg-[#1a2b5e] text-white transition-colors shadow-sm w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider border border-[#0A1128]"
+                className="bg-[#D4AF37] hover:bg-white text-[#0A1128] transition-colors shadow-sm w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider"
               >
                 CALL LA OFFICE
               </a>
@@ -107,15 +107,15 @@ export default function OfficeLocations() {
           </div>
 
           {/* Oakland Office */}
-          <div className="bg-white p-8 rounded-3xl border border-neutral-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative space-y-6 flex flex-col justify-between hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300">
+          <div className="bg-white/5 p-8 rounded-3xl border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative space-y-6 flex flex-col justify-between hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300">
             <div className="space-y-4">
-              <div className="flex items-center justify-between border-b border-neutral-100 pb-4">
+              <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#0A1128] text-[#D4AF37] flex items-center justify-center font-bold shadow-md border border-[#D4AF37]/20">
+                  <div className="w-10 h-10 rounded-full bg-white/10 text-[#D4AF37] flex items-center justify-center font-bold shadow-md border border-[#D4AF37]/20">
                     <i className="fas fa-building text-base"></i>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold font-serif-heading text-[#0A1128]">
+                    <h3 className="text-xl font-bold font-serif-heading text-white">
                       OAKLAND OFFICE
                     </h3>
                     <span className="text-xs text-[#D4AF37] font-bold tracking-wider">
@@ -123,16 +123,16 @@ export default function OfficeLocations() {
                     </span>
                   </div>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-[#0A1128]/5 text-[#0A1128] text-[11px] font-bold border border-[#D4AF37]/30 hidden sm:block">
+                <span className="px-3 py-1 rounded-full bg-[#D4AF37]/10 text-white text-[11px] font-bold border border-[#D4AF37]/30 hidden sm:block">
                   Northern CA Hub
                 </span>
               </div>
 
-              <div className="space-y-3 text-sm text-neutral-600 font-medium">
+              <div className="space-y-3 text-sm text-white/80 font-medium">
                 <div className="flex items-start gap-3">
                   <i className="fas fa-location-dot text-[#D4AF37] mt-1"></i>
                   <div>
-                    <p className="font-bold text-[#0A1128]">1999 Harrison Street, Suite 1800</p>
+                    <p className="font-bold text-white">1999 Harrison Street, Suite 1800</p>
                     <p>Oakland, CA 94612</p>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ export default function OfficeLocations() {
                   <i className="fas fa-phone-volume text-[#D4AF37]"></i>
                   <a
                     href="tel:8774245848"
-                    className="font-bold text-[#0A1128] hover:text-[#D4AF37] transition-colors text-base"
+                    className="font-bold text-white hover:text-[#D4AF37] transition-colors text-base"
                   >
                     877-424-5848
                   </a>
@@ -153,7 +153,7 @@ export default function OfficeLocations() {
                     href="https://www.hailulawyers.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-neutral-500 hover:text-[#D4AF37] underline font-medium"
+                    className="text-xs text-white/60 hover:text-[#D4AF37] underline font-medium"
                   >
                     www.hailulawyers.com
                   </a>
@@ -178,13 +178,13 @@ export default function OfficeLocations() {
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
               <Link
                 href="/locations/oakland"
-                className="border border-[#D4AF37] bg-white text-[#0A1128] hover:bg-[#0A1128] hover:text-white hover:border-[#0A1128] transition-colors w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider"
+                className="border border-[#D4AF37] bg-transparent text-white hover:bg-[#D4AF37] hover:text-[#0A1128] transition-colors w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider"
               >
                 OAKLAND OFFICE DETAILS
               </Link>
               <a
                 href="tel:8774245848"
-                className="bg-[#0A1128] hover:bg-[#1a2b5e] text-white transition-colors shadow-sm w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider border border-[#0A1128]"
+                className="bg-[#D4AF37] hover:bg-white text-[#0A1128] transition-colors shadow-sm w-full text-center py-3 rounded-full text-xs font-bold uppercase tracking-wider"
               >
                 CALL OAKLAND OFFICE
               </a>

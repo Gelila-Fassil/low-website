@@ -58,7 +58,7 @@ export default function MichaelHailuProfilePage() {
             <div className="lg:col-span-4 relative">
               <div className="relative h-[380px] rounded-2xl overflow-hidden border-2 border-[#D4AF37]/50 shadow-xl">
                 <Image
-                  src="/ceo.jpg"
+                  src="/ceo1.jpg"
                   alt="Michael Hailu, Attorney at Law"
                   fill
                   priority

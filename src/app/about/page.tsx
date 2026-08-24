@@ -131,7 +131,7 @@ export default function AboutPage() {
                     }}
                   >
                     <img
-                      src="/ceo.jpg"
+                      src="/ceo1.jpg"
                       alt="Michael Hailu, Esq."
                       className="w-full h-full object-cover object-center rounded-[28px] brightness-105"
                     />
@@ -264,7 +264,7 @@ export default function AboutPage() {
                 {
                   name: "Michael Hailu, Esq.",
                   role: "Founder & Lead Trial Attorney",
-                  image: "/ceo.jpg",
+                  image: "/ceo1.jpg",
                   experience: "25+ Yrs Experience",
                   bio: "Admitted to the California State Bar, Michael has represented thousands of clients across state and federal courts.",
                   practiceArea: "Personal Injury & Trial",
@@ -489,7 +489,7 @@ export default function AboutPage() {
                     <div className="flex items-center">
                       <div className="flex -space-x-3 overflow-hidden">
                         <img
-                          src="/ceo.jpg"
+                          src="/ceo1.jpg"
                           alt="Michael Hailu, Esq."
                           className="inline-block h-11 w-11 rounded-2xl object-cover ring-2 ring-[var(--bg-primary)]"
                         />

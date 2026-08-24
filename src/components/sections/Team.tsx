@@ -43,7 +43,7 @@ export default function Team() {
                 <div className="relative mx-auto max-w-md rounded-[28px] overflow-hidden border border-white/20 shadow-2xl group">
                   <div className="relative aspect-[4/5] w-full overflow-hidden bg-black">
                     <img
-                      src="/ceo.jpg"
+                      src="/ceo1.jpg"
                       alt="Attorney Michael Hailu - Founder & Principal Legal Counsel"
                       className="w-full h-full object-cover object-top brightness-105 contrast-105 group-hover:scale-105 transition-transform duration-700"
                     />
